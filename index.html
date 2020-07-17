@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/be4f1c1ae6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>ZEN TEXTAREA</h1>
+<form id="form" onsubmit="return false;">
+    <div class="form__header-block">
+        <label class="form__header-block__label">What`s on yor mind?</label>
+        <button onclick="showDetails()" class="form__header-block__button"><i class="fas fa-expand-arrows-alt"></i>
+            EXPAND
+        </button>
+    </div>
+    <textarea placeholder="Leave a comment" name="comment" form="form"></textarea>
+    <br>
+    <button class="form__button-submit">SUBMIT COMMENT</button>
+</form>
+
+<script>
+
+
+    let shrinkButton = document.createElement('button');
+    shrinkButton.setAttribute('onclick', 'showForm()');
+    shrinkButton.className = 'button-shrink';
+    shrinkButton.innerHTML = '<i class="fas fa-compress-arrows-alt"></i> SHRINK';
+
+    let container = document.createElement('section');
+    container.className = 'text-container';
+
+    let p = document.createElement('p');
+
+    function showDetails() {
+        p.innerHTML = document.querySelector("textarea").value;
+        container.append(p);
+        document.body.append(shrinkButton);
+        document.body.append(container);
+        document.getElementById('form').hidden = true;
+        document.querySelector('h1').hidden = true;
+        document.body.style.background = 'rgb(51, 153, 102)';
+    }
+
+    function showForm() {
+        document.body.style.background = 'none';
+        document.getElementById('form').hidden = false;
+        document.querySelector('h1').hidden = false;
+        shrinkButton.remove();
+        container.remove();
+    }
+
+
+</script>
+</body>
+</html>
