@@ -57,25 +57,29 @@ textarea {
 
 .form__button-submit {
     color: white;
+    border: none;
     background-color: rgb(102, 204, 153);
     border-radius: 3px;
 }
 
+.text-container {
+    margin-top: 3vh;
+    position: absolute;
+    background-color: white;
+    border-radius: 3px;
+}
+
 @media (max-width: 375px) {
+
     .form__button-submit {
         width: 91vw;
         height: 9vh;
-        border: none;
         margin: 1vh 0;
     }
 
     .text-container {
-        margin-top: 3vh;
-        position: absolute;
         height: 94vh;
         width: 100%;
-        background-color: white;
-        border-radius: 3px;
     }
 
     p {
@@ -93,6 +97,77 @@ textarea {
 
 }
 
-@media (max-width: 700px) {
+@media (min-width: 376px) {
 
+    #form {
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    textarea {
+        width: 47vw;
+        height: 250px;
+        max-width: 435px;
+    }
+
+    .form__button-submit {
+        width: 47vw;
+        height: 8vh;
+        margin: 1vh 0;
+        font-size: 2vw;
+    }
+
+    h1 {
+        font-size: 3vw;
+        margin-top: 28vh;
+    }
+
+    .text-container {
+        margin: 3vh 15vw;
+        height: 94vh;
+        width: 70vw;
+    }
+    p {
+        font-size: 18px;
+        margin: 4vh 4vh;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 769px) {
+    #form {
+        width: 33vw;
+        margin: 0 auto;
+    }
+
+    textarea {
+        width: 32vw;
+        height: 250px;
+        max-width: 600px;
+    }
+
+    .form__button-submit {
+        width: 32vw;
+        height: 6vh;
+        margin: 1vh 0;
+        font-size: 1.3vw;
+    }
+
+    h1 {
+        font-size: 2vw;
+        margin-top: 28vh;
+    }
+
+    .text-container {
+        border-radius: 10px;
+        margin: 3vh 25vw;
+        height: 94vh;
+        width: 50vw;
+    }
+
+    p {
+        font-size: 28px;
+        margin: 4vh 4vh;
+        font-weight: 600;
+    }
 }
